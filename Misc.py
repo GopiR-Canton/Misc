@@ -11,7 +11,7 @@ __Logger__ = None
 __LOGFILE__ = Config.LogFile
 __MSGBOXTITLE__ = "Message"
 __MainWindow__ = None
-__Exercises__ = []  # what?!
+__Exercises__ = []
 
 
 def initlog(filename):
