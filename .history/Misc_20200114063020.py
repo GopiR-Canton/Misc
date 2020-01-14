@@ -51,7 +51,7 @@ def listExercises(printToLog):
         if printToLog:
             __Logger__.logEntry(__LOGFILE__, strExercise)
         else:
-            print(strExercise)
+            print(strExercise)  # Test change
 
 
 def loadExercisesToList():
