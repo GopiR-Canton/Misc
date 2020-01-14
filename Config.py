@@ -1,0 +1,1 @@
+LogFile = "PyLog.txt"
