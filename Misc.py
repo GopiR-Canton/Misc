@@ -67,8 +67,8 @@ def loadExercisesToList():
 
 def renderMainWindowControls():
     TopFrame = tkinter.Frame(__MainWindow__, name="topFrame")
-    TopFrame.grid(row=0, column=0)
-    TopFrame.pack(side="top", fill="both", expand=True)
+    TopFrame.grid(row=0, column=0, sticky="w")
+    # TopFrame.pack(fill=tkinter.X)
 
     tkinter.Label(TopFrame, name="lblExercises",
                   text="Exercises").grid(row=1, column=0)
