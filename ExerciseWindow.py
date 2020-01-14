@@ -20,12 +20,12 @@ class ExerciseWindow(Toplevel):  # Create a window
 
     def renderMainWindowControls(self):
         TopFrame = Frame(self)
-        button_width = 15
-        button_height = 10
+        TopFrame.grid(row=0, column=0)
+        TopFrame.pack(side="top", fill="both", expand=True)
 
-        TopFrame.button = Button(TopFrame, text="Save")
-        TopFrame.button.configure(height=button_height, width=button_width)
-        TopFrame.button.grid(row=0, column=0)
+        b = Button(TopFrame, text="Save", command=self.Save)
+        b.configure(height=2, width=5)
+        b.grid(row=0, column=1)
 
     def Save(self):
         if (self.__IsAddMode__):
