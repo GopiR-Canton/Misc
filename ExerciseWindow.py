@@ -24,7 +24,7 @@ class ExerciseWindow(Toplevel):  # Create a window
         button_height = 10
 
         TopFrame.button = Button(TopFrame, text="Save")
-        TopFrame.button. configure(height=button_height, width=button_width)
+        TopFrame.button.configure(height=button_height, width=button_width)
         TopFrame.button.grid(row=0, column=0)
 
     def Save(self):
