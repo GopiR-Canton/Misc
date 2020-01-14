@@ -1,4 +1,5 @@
 from tkinter import Toplevel, Button, Frame, Label, Text, ttk
+from ExerciseCategory import ExerciseCategory
 
 
 class ExerciseWindow(Toplevel):  # Create a window
@@ -19,20 +20,25 @@ class ExerciseWindow(Toplevel):  # Create a window
         self.renderMainWindowControls()
 
     def renderMainWindowControls(self):
-        TopFrame = Frame(self)
+        TopFrame = Frame(self, name="topFrame")
         TopFrame.grid(row=0, column=0)
-        TopFrame.pack(side="top", fill="both", expand=True)
 
+        Label(TopFrame, text="Exercise").grid(row=1, column=1)
+        Text(TopFrame, name="txtExercise", height=1,
+             width=30).grid(row=1, column=2)
+        Label(TopFrame, text="Category").grid(row=2, column=1)
+        ttk.Combobox(TopFrame, name="cboCategory", height=1,
+                     width=28, values=ExerciseCategory.getExerciseCategories()).grid(row=2, column=2)
         b = Button(TopFrame, text="Save", command=self.Save)
-        b.configure(height=2, width=5)
-        b.grid(row=0, column=1)
+        b.configure(height=1, width=5)
+        b.grid(row=3, column=1)
 
     def Save(self):
         if (self.__IsAddMode__):
             print("rt")
 
     def ShowDialog(self):
-        self.geometry("300x200+500+100")
+        self.geometry("300x80+500+100")
         self.resizable(height=False, width=False)
         self.grab_set()
         self.mainloop()
